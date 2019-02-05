@@ -2,23 +2,19 @@
 <html>
 <head>
 <meta name="description" content="">
-<meta name="keywords" content="Python,Brython">
 <meta charset="iso-8859-1">
-<script type="text/javascript" src="https://www.brython.info/src/brython.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body onload="brython(1)">
+<body>
 
-<script type="text/python">
-from browser import document, alert
-
-def echo(ev):
-    alert("Hello {} !".format(document["zone"].value))
-
-document["test"].bind("click", echo)
+<script>
+	$.get('https://crossorigin.me/http://www.espn.com.ar/video/clip/_/id/5246430', function(response) {
+  	console.log(response);
+	});
 </script>
-<p>Your name isss : <input id="zone" autocomplete="off">
-<button id="test">clic !</button>
+
+    
 </body>
 
 </html>
